@@ -7,4 +7,7 @@ references:
     identity: A003154
   - system: wikipedia
     identity: Star number
+definition:
+  signature: "(n: integer) -> integer"
+  body: 12 * Binomial(n, 2) + 1
 ---

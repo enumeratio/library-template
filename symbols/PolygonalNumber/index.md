@@ -11,4 +11,9 @@ references:
     note: the triangular numbers, PolygonalNumber's default
   - system: wikipedia
     identity: Polygonal number
+definition:
+  signature: "(n: integer, sides: integer?) -> integer"
+  body: ((sides - 2) * n^2 - (sides - 4) * n) / 2
+  defaults:
+    sides: "3"
 ---

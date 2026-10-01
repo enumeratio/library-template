@@ -9,4 +9,9 @@ references:
     note: the centered triangular numbers, the default
   - system: wikipedia
     identity: Centered polygonal number
+definition:
+  signature: "(n: integer, sides: integer?) -> integer"
+  body: sides * n * (n - 1) / 2 + 1
+  defaults:
+    sides: "3"
 ---

@@ -33,19 +33,29 @@ symbol into a compute-engine.
 
 Each symbol is a folder, `symbols/<Name>/`, holding what you write:
 
-- `index.md`: front matter (name, summary, the `references` other sources give it) and a
-  markdown body;
+- `index.md`: front matter (name, summary, the `references` other sources give it, and its
+  `definition`) and a markdown body. The definition is Epsil:
+
+  ```yaml
+  definition:
+    signature: "(n: integer, sides: integer?) -> integer"
+    body: Sum(enumeratio.PolygonalNumber(k, sides), (k, 1, n))
+    defaults:
+      sides: "3"
+  ```
+
+  The signature names each parameter (`?` makes it an option), the body uses them, and a
+  default is Epsil too. Packing pins every other symbol the body uses: this library's own, and
+  those of the libraries installed beside it; a name nothing installed serves goes in
+  `requires`, with its pin.
 - `examples.tsv`: one row per example, each with a stable id; they're the install check, so a
   definition whose examples fail isn't declared;
-- `definition.json`: the signature (parameter names, `?` for an option), the body (an Epsil
-  `Function`, as MathJSON), `requires` (the pin of every other library's symbol it uses) and
-  `defaults` for its options;
 - `notation.json` (optional): how it's written, as box templates and LaTeX triggers;
 - `examples.values.<system>.tsv` (optional): each example as another system writes and
   answers it, for the systems `package.json`'s `enumeratio.mappings` names.
 
-Packing writes the rest (`symbols/index.json`, each symbol's `examples.json` and
-`mappings.json`, and `dist/`), which you commit, since a tag serves them as they are:
+Packing writes the rest (`symbols/index.json`, each symbol's `definition.json`, `examples.json`
+and `mappings.json`, and `dist/`), which you commit, since a tag serves them as they are:
 
 ```sh
 node <enumeratio>/packages/manifest/scripts/pack-library.ts .

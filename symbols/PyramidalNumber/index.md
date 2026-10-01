@@ -9,4 +9,9 @@ references:
     note: the tetrahedral numbers, the default
   - system: wikipedia
     identity: Pyramidal number
+definition:
+  signature: "(n: integer, sides: integer?) -> integer"
+  body: Sum(enumeratio.PolygonalNumber(k, sides), (k, 1, n))
+  defaults:
+    sides: "3"
 ---
