@@ -17,22 +17,5 @@ jobs:
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
-      # The system's tooling, until it's published: pack-library writes the index, each symbol's
-      # examples and mappings, and the JavaScript entry, and checks every pin resolves.
-      - uses: actions/checkout@v4
-        with:
-          repository: enumeratio/enumeratio
-          path: system
-      - uses: pnpm/action-setup@v4
-        with:
-          version: 12.3.4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 24
-      - run: pnpm install --frozen-lockfile
-        working-directory: system
-      - run: pnpm --filter '@enumeratio/manifest...' run build
-        working-directory: system
-      - run: node system/packages/manifest/scripts/pack-library.ts .
-      - name: what's committed is what packing writes
-        run: git diff --exit-code -- symbols dist
+      # Packed with the system at this ref: the ref is the system version this library is written against.
+      - uses: enumeratio/enumeratio/.github/actions/pack-library@library-tooling
