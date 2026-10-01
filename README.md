@@ -61,6 +61,14 @@ and `mappings.json`, and `dist/`), which you commit, since a tag serves them as 
 node <enumeratio>/packages/manifest/scripts/pack-library.ts .
 ```
 
-with a checkout of [enumeratio/enumeratio](https://github.com/enumeratio/enumeratio). CI checks
-what's committed is current. Give `--since <previous version's checkout>` to check that the
-version number says at least what changed.
+with a checkout of [enumeratio/enumeratio](https://github.com/enumeratio/enumeratio). In CI, the
+system's action packs it and checks what's committed is current:
+
+```yaml
+- uses: actions/checkout@v4
+- uses: enumeratio/enumeratio/.github/actions/pack-library@<ref>
+```
+
+The ref is the system this library is written against: pin it, and move it when you move to a
+newer system. Give the action `since:` (or the script `--since`) a checkout of the previous
+version to check that the version number says at least what changed.
