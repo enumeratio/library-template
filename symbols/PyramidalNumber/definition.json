@@ -1,0 +1,30 @@
+{
+  "signature": "(n: integer, sides: integer?) -> integer",
+  "body": [
+    "Function",
+    [
+      "Sum",
+      [
+        "MemberCall",
+        "enumeratio",
+        "'PolygonalNumber'",
+        "k",
+        "sides"
+      ],
+      [
+        "Tuple",
+        "k",
+        1,
+        "n"
+      ]
+    ],
+    "n",
+    "sides"
+  ],
+  "requires": {
+    "enumeratio.PolygonalNumber": "sha256-a17f65c03a97d6dbee7c94c95f7ff8869ece8419b52697540fcad1fa88dd6357"
+  },
+  "defaults": {
+    "sides": 3
+  }
+}

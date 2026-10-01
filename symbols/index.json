@@ -1,0 +1,121 @@
+{
+  "namespace": "enumeratio",
+  "symbols": {
+    "CenteredPolygonalNumber": {
+      "signature": "(n: integer, sides: integer?) -> integer",
+      "pin": "sha256-fbbf2ecc7ef51ab6b68b5ee48a0b47603a42dc0c5db3dbf8117223c08e9bf8f4",
+      "examples": 2,
+      "params": [
+        "n",
+        "sides"
+      ],
+      "defaults": {
+        "sides": 3
+      },
+      "summary": "The n-th centered polygonal number with a given number of sides: a dot, then rings of `sides` dots each.",
+      "mappings": [
+        "oeis",
+        "wikipedia"
+      ]
+    },
+    "PolygonalNumber": {
+      "signature": "(n: integer, sides: integer?) -> integer",
+      "pin": "sha256-a17f65c03a97d6dbee7c94c95f7ff8869ece8419b52697540fcad1fa88dd6357",
+      "examples": 3,
+      "params": [
+        "n",
+        "sides"
+      ],
+      "defaults": {
+        "sides": 3
+      },
+      "notation": {
+        "traditional": [
+          {
+            "params": [
+              "n"
+            ],
+            "box": [
+              "SubscriptBox",
+              "T",
+              [
+                "TemplateSlot",
+                "n"
+              ]
+            ]
+          },
+          {
+            "params": [
+              "n",
+              "sides"
+            ],
+            "box": [
+              "SubsuperscriptBox",
+              "P",
+              [
+                "TemplateSlot",
+                "n"
+              ],
+              [
+                "RowBox",
+                [
+                  "(",
+                  [
+                    "TemplateSlot",
+                    "sides"
+                  ],
+                  ")"
+                ]
+              ]
+            ]
+          }
+        ],
+        "latex": [
+          {
+            "trigger": "\\polygonal",
+            "kind": "function"
+          }
+        ]
+      },
+      "summary": "The n-th polygonal number with a given number of sides: triangular numbers unless `sides` says otherwise.",
+      "mappings": [
+        "oeis",
+        "wikipedia",
+        "wolfram"
+      ]
+    },
+    "PyramidalNumber": {
+      "signature": "(n: integer, sides: integer?) -> integer",
+      "pin": "sha256-6192de63d546ecf7cb47e6060a187459b65332687c993c032285cd3496576754",
+      "requires": {
+        "enumeratio.PolygonalNumber": "sha256-a17f65c03a97d6dbee7c94c95f7ff8869ece8419b52697540fcad1fa88dd6357"
+      },
+      "examples": 2,
+      "params": [
+        "n",
+        "sides"
+      ],
+      "defaults": {
+        "sides": 3
+      },
+      "summary": "The n-th pyramidal number with a polygonal base: the sum of the first n polygonal numbers with that many sides.",
+      "mappings": [
+        "oeis",
+        "wikipedia"
+      ]
+    },
+    "StarNumber": {
+      "signature": "(n: integer) -> integer",
+      "pin": "sha256-5bb6617b051f9bcb99c2b59bac308c8603093751c6d0f3377c398edb9ff5c759",
+      "examples": 1,
+      "params": [
+        "n"
+      ],
+      "summary": "The n-th star number: a centered hexagram, 6n(n - 1) + 1.",
+      "mappings": [
+        "oeis",
+        "wikipedia"
+      ]
+    }
+  }
+}

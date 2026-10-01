@@ -1,0 +1,4 @@
+id	section	role	expr	expected
+polygonal-triangular-4			[MemberCall, enumeratio, "'PolygonalNumber'", 4]	10
+polygonal-pentagonal-4			[MemberCall, enumeratio, "'PolygonalNumber'", 4, 5]	22
+polygonal-square-9			[MemberCall, enumeratio, "'PolygonalNumber'", 9, 4]	81

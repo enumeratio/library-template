@@ -1,0 +1,23 @@
+[
+  {
+    "id": "centered-triangular-4",
+    "expr": [
+      "MemberCall",
+      "enumeratio",
+      "'CenteredPolygonalNumber'",
+      4
+    ],
+    "expected": 19
+  },
+  {
+    "id": "centered-square-3",
+    "expr": [
+      "MemberCall",
+      "enumeratio",
+      "'CenteredPolygonalNumber'",
+      3,
+      4
+    ],
+    "expected": 13
+  }
+]

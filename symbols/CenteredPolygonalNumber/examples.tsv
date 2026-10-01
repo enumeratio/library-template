@@ -1,0 +1,3 @@
+id	section	role	expr	expected
+centered-triangular-4			[MemberCall, enumeratio, "'CenteredPolygonalNumber'", 4]	19
+centered-square-3			[MemberCall, enumeratio, "'CenteredPolygonalNumber'", 3, 4]	13

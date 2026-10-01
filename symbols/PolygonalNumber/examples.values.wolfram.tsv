@@ -1,0 +1,4 @@
+id	in	out	verdict
+polygonal-triangular-4	PolygonalNumber[4]	10	agree
+polygonal-pentagonal-4	PolygonalNumber[5, 4]	22	agree
+polygonal-square-9	PolygonalNumber[4, 9]	81	agree

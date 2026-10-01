@@ -1,0 +1,12 @@
+[
+  {
+    "id": "star-4",
+    "expr": [
+      "MemberCall",
+      "enumeratio",
+      "'StarNumber'",
+      4
+    ],
+    "expected": 73
+  }
+]

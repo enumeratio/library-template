@@ -1,0 +1,2 @@
+id	section	role	expr	expected
+star-4			[MemberCall, enumeratio, "'StarNumber'", 4]	73

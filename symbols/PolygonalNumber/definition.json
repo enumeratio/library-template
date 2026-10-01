@@ -1,0 +1,40 @@
+{
+  "signature": "(n: integer, sides: integer?) -> integer",
+  "body": [
+    "Function",
+    [
+      "Divide",
+      [
+        "Subtract",
+        [
+          "Multiply",
+          [
+            "Subtract",
+            "sides",
+            2
+          ],
+          [
+            "Power",
+            "n",
+            2
+          ]
+        ],
+        [
+          "Multiply",
+          [
+            "Subtract",
+            "sides",
+            4
+          ],
+          "n"
+        ]
+      ],
+      2
+    ],
+    "n",
+    "sides"
+  ],
+  "defaults": {
+    "sides": 3
+  }
+}

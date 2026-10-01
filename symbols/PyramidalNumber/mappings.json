@@ -1,0 +1,14 @@
+{
+  "references": [
+    {
+      "system": "oeis",
+      "identity": "A000292",
+      "relation": "partial",
+      "note": "the tetrahedral numbers, the default"
+    },
+    {
+      "system": "wikipedia",
+      "identity": "Pyramidal number"
+    }
+  ]
+}

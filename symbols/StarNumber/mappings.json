@@ -1,0 +1,12 @@
+{
+  "references": [
+    {
+      "system": "oeis",
+      "identity": "A003154"
+    },
+    {
+      "system": "wikipedia",
+      "identity": "Star number"
+    }
+  ]
+}

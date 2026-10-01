@@ -1,0 +1,3 @@
+id	section	role	expr	expected
+pyramidal-tetrahedral-4			[MemberCall, enumeratio, "'PyramidalNumber'", 4]	20
+pyramidal-square-4			[MemberCall, enumeratio, "'PyramidalNumber'", 4, 4]	30

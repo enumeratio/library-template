@@ -1,0 +1,23 @@
+[
+  {
+    "id": "pyramidal-tetrahedral-4",
+    "expr": [
+      "MemberCall",
+      "enumeratio",
+      "'PyramidalNumber'",
+      4
+    ],
+    "expected": 20
+  },
+  {
+    "id": "pyramidal-square-4",
+    "expr": [
+      "MemberCall",
+      "enumeratio",
+      "'PyramidalNumber'",
+      4,
+      4
+    ],
+    "expected": 30
+  }
+]

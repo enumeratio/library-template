@@ -1,0 +1,20 @@
+{
+  "signature": "(n: integer) -> integer",
+  "body": [
+    "Function",
+    [
+      "Add",
+      [
+        "Multiply",
+        12,
+        [
+          "Binomial",
+          "n",
+          2
+        ]
+      ],
+      1
+    ],
+    "n"
+  ]
+}

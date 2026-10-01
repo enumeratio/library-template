@@ -1,0 +1,41 @@
+{
+  "references": [
+    {
+      "system": "wolfram",
+      "identity": "PolygonalNumber"
+    },
+    {
+      "system": "oeis",
+      "identity": "A000217",
+      "relation": "partial",
+      "note": "the triangular numbers, PolygonalNumber's default"
+    },
+    {
+      "system": "wikipedia",
+      "identity": "Polygonal number"
+    }
+  ],
+  "implementations": {
+    "polygonal-triangular-4": {
+      "wolfram": {
+        "in": "PolygonalNumber[4]",
+        "out": "10",
+        "verdict": "agree"
+      }
+    },
+    "polygonal-pentagonal-4": {
+      "wolfram": {
+        "in": "PolygonalNumber[5, 4]",
+        "out": "22",
+        "verdict": "agree"
+      }
+    },
+    "polygonal-square-9": {
+      "wolfram": {
+        "in": "PolygonalNumber[4, 9]",
+        "out": "81",
+        "verdict": "agree"
+      }
+    }
+  }
+}
