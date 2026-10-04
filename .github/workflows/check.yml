@@ -18,4 +18,4 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       # Packed with the system at this ref: the ref is the system version this library is written against.
-      - uses: enumeratio/enumeratio/.github/actions/pack-library@c1da285ceba71b42ad890ef4a352cd069851b3af # main after #580
+      - uses: enumeratio/enumeratio/.github/actions/pack-library@1f92514d1c435c9e3723bd0367482aca525f3a4e # main after #610
