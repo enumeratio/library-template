@@ -70,5 +70,6 @@ system's action packs it and checks what's committed is current:
 ```
 
 The ref is the system this library is written against: pin it, and move it when you move to a
-newer system. Give the action `since:` (or the script `--since`) a checkout of the previous
-version to check that the version number says at least what changed.
+newer system. Given `since:`, a checkout of the previous version, the action also checks that the
+version number says at least what changed: this repository's CI passes it the last tag, so a
+changed definition can't ship under the same version.

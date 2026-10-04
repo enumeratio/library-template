@@ -17,5 +17,19 @@ jobs:
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      # The last tag before this commit: packing checks the version number says at least what
+      # changed since it.
+      - name: the previous version
+        id: previous
+        run: |
+          tag=$(git describe --tags --abbrev=0 HEAD^ 2>/dev/null || true)
+          if [ -n "$tag" ]; then
+            git worktree add -q "$RUNNER_TEMP/previous" "$tag"
+            echo "dir=$RUNNER_TEMP/previous" >> "$GITHUB_OUTPUT"
+          fi
       # Packed with the system at this ref: the ref is the system version this library is written against.
       - uses: enumeratio/enumeratio/.github/actions/pack-library@1f92514d1c435c9e3723bd0367482aca525f3a4e # main after #610
+        with:
+          since: ${{ steps.previous.outputs.dir }}
