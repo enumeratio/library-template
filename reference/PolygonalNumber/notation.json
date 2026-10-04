@@ -1,7 +1,10 @@
 {
   "traditional": [
     { "params": ["n"], "box": ["SubscriptBox", "T", ["TemplateSlot", "n"]] },
-    { "params": ["n", "sides"], "box": ["SubsuperscriptBox", "P", ["TemplateSlot", "n"], ["RowBox", ["(", ["TemplateSlot", "sides"], ")"]]] }
+    {
+      "params": ["n", "sides"],
+      "box": ["SubsuperscriptBox", "P", ["TemplateSlot", "n"], ["RowBox", ["(", ["TemplateSlot", "sides"], ")"]]]
+    }
   ],
   "latex": [{ "trigger": "\\polygonal", "kind": "function" }]
 }

@@ -1,4 +1,4 @@
-id	in	out	verdict
-polygonal-triangular-4	PolygonalNumber[4]	10	agree
-polygonal-pentagonal-4	PolygonalNumber[5, 4]	22	agree
-polygonal-square-9	PolygonalNumber[4, 9]	81	agree
+id	in	out	tex.in	tex.out
+polygonal-triangular-4	PolygonalNumber[4]	10	\text{PolygonalNumber}[4]	10
+polygonal-pentagonal-4	PolygonalNumber[5, 4]	22	\text{PolygonalNumber}[5,4]	22
+polygonal-square-9	PolygonalNumber[4, 9]	81	\text{PolygonalNumber}[4,9]	81
