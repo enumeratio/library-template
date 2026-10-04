@@ -1,6 +1,6 @@
 {
   "name": "library-template",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A template enumeratio library: figurate numbers, written in Epsil.",
   "license": "WTFPL",
   "keywords": [
@@ -12,14 +12,14 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
     },
-    "./symbols/*": "./symbols/*"
+    "./reference/*": "./reference/*"
   },
   "peerDependencies": {
     "@cortex-js/compute-engine": "*"
   },
   "enumeratio": {
     "namespace": "enumeratio",
-    "index": "./symbols/index.json",
+    "index": "./reference/index.json",
     "system": "0.x",
     "mappings": [
       "wolfram",

@@ -31,7 +31,7 @@ symbol into a compute-engine.
 
 ## Writing one
 
-Each symbol is a folder, `symbols/<Name>/`, holding what you write:
+Each symbol is a folder, `reference/<Name>/`, holding what you write:
 
 - `index.md`: front matter (name, summary, the `references` other sources give it, and its
   `definition`) and a markdown body. The definition is Epsil:
@@ -54,7 +54,7 @@ Each symbol is a folder, `symbols/<Name>/`, holding what you write:
 - `examples.values.<system>.tsv` (optional): each example as another system writes and
   answers it, for the systems `package.json`'s `enumeratio.mappings` names.
 
-Packing writes the rest (`symbols/index.json`, each symbol's `definition.json`, `examples.json`
+Packing writes the rest (`reference/index.json`, each symbol's `definition.json`, `examples.json`
 and `mappings.json`, and `dist/`), which you commit, since a tag serves them as they are:
 
 ```sh
