@@ -13,13 +13,13 @@ it to start a library of your own.
 ## Using it
 
 The library is its GitHub repository, versioned by its tags; the owner is its namespace. A
-host reads it through `@enumeratio/manifest/libraries`, over jsDelivr, fetching only the
+host reads it through `@notatio/manifest/libraries`, over jsDelivr, fetching only the
 symbols an expression uses:
 
 ```ts
-import { parseExpression } from "@enumeratio/formats/expression";
-import { createRegistryResolver } from "@enumeratio/manifest";
-import { catalog, githubHost } from "@enumeratio/manifest/libraries";
+import { parseExpression } from "@notatio/formats/expression";
+import { createRegistryResolver } from "@notatio/manifest";
+import { catalog, githubHost } from "@notatio/manifest/libraries";
 
 const resolver = createRegistryResolver(catalog(["enumeratio/library-template@0.1.0"], { host: githubHost() }));
 const { expression } = await resolver.ensure(ce, parseExpression("enumeratio.PolygonalNumber(4, sides: 5)").json);
